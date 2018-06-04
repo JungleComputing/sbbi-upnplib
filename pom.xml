@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ************************************************************* -->
+    <!-- *** POM Relationships *************************************** -->
+    <!-- ************************************************************* -->
+
+    <groupId>nl.junglecomputing</groupId>
+    <artifactId>sbbi-upnplib</artifactId>
+    <version>1.0.4</version>
+
+    <dependencies>
+	<dependency>
+	    <groupId>commons-jxpath</groupId>
+	    <artifactId>commons-jxpath</artifactId>
+	    <version>1.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>1.0.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging-api</artifactId>
+	    <version>1.0.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>mx4j</groupId>
+	    <artifactId>mx4j-impl</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>mx4j</groupId>
+	    <artifactId>mx4j-jmx</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>mx4j</groupId>
+	    <artifactId>mx4j-remote</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>mx4j</groupId>
+	    <artifactId>mx4j-tools</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
+
+	<!-- test -->
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.3.1</version>
+	    <scope>test</scope>
+	</dependency>
+    </dependencies>
+    <!-- ************************************************************* -->
+    <!-- *** Project Information ************************************* -->
+    <!-- ************************************************************* -->
+
+    <name>SBBI UPnP lib</name>
+    <description>A libraby for UPnP protocol http://www.upnp.org/</description>
+    <url>http://www.sbbi.net/site/upnp/index.html</url>
+
+    <!-- ************************************************************* -->
+    <!-- *** Build Settings ****************************************** -->
+    <!-- ************************************************************* -->
+
+    <packaging>jar</packaging>
+
+    <build>
+	<plugins>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>2.0.2</version>
+		<configuration>
+		    <source>1.4</source>
+		    <target>1.4</target>
+		</configuration>
+	    </plugin>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-source-plugin</artifactId>
+		<executions>
+		    <execution>
+			<id>attach-sources</id>
+			<goals>
+			    <goal>jar</goal>
+			</goals>
+		    </execution>
+		</executions>
+	    </plugin>
+	</plugins>
+    </build>
+
+    <!-- ************************************************************* -->
+    <!-- *** Build Environment  ************************************** -->
+    <!-- ************************************************************* -->
+
+</project>
