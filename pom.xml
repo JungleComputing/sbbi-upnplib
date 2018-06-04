@@ -4,6 +4,10 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <!-- ************************************************************* -->
     <!-- *** POM Relationships *************************************** -->
     <!-- ************************************************************* -->
@@ -63,7 +67,18 @@
 
     <name>SBBI UPnP lib</name>
     <description>A libraby for UPnP protocol http://www.upnp.org/</description>
-    <url>http://www.sbbi.net/site/upnp/index.html</url>
+    <url>https://github.com/junglecomputing/sbbi-upnplib.git</url>
+    <scm>
+	<url>https://github.com/junglecomputing/sbbi-upnplib.git</url>
+    </scm>
+    <licenses>
+      <license>
+        <name>Apache License, Version 1.1</name>
+        <url>https://www.apache.org/licenses/LICENSE-1.1</url>
+        <distribution>repo</distribution>
+        <comments>A business-friendly OSS license</comments>
+      </license>
+    </licenses>
 
     <!-- ************************************************************* -->
     <!-- *** Build Settings ****************************************** -->
@@ -85,6 +100,7 @@
 	    <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-source-plugin</artifactId>
+		<version>3.0.1</version>
 		<executions>
 		    <execution>
 			<id>attach-sources</id>
