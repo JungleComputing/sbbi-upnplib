@@ -70,29 +70,29 @@ import net.sbbi.upnp.messages.UPNPMessageFactory;
 /**
  * This class can be used for remote objects that need to work behind
  * an NAT firewall compatible with IGD UPNP specifications.
- * The following system properties let you setup this class : <br/>
+ * The following system properties let you setup this class : <br>
  * 
  * net.sbbi.upnp.remote.deviceUDN=someUPNPDeviceUDN, the device identifier to
- * be used when multiple IGD upnp devices are on the network<br/>
+ * be used when multiple IGD upnp devices are on the network<br>
  * net.sbbi.upnp.remote.failWhenNoDeviceFound=true|false, Property to throw an
- * exception when the object is exported and no UPNP device is found, default to false<br/>
+ * exception when the object is exported and no UPNP device is found, default to false<br>
  * net.sbbi.upnp.remote.failWhenDeviceCommEx=true|false, Property to throw an
- * exception when the object is exported and an error occurs during com with device, default to false<br/>
+ * exception when the object is exported and an error occurs during com with device, default to false<br>
  * net.sbbi.upnp.remote.discoveryTimeout=4000, timeout in ms to discover upnp devices
  * default to 1500, try to increase this timeout if you can't find a present device
- * on the network<br/>
+ * on the network<br>
  * 
  * Each instance of this class can create a shutdown hook trigered during JVM shutdown
  * to make sure that the port opened with UPNP is closed.
- * The hook is created as soon as the port is opened on the UPNP device.<br/>
+ * The hook is created as soon as the port is opened on the UPNP device.<br>
  * 
  * Migration for distributed objects is quite simple :
  * change the standard java.rmi.server.UnicastRemoteObject class extends to
- * this class and you're done.<br/>
+ * this class and you're done.<br>
  * 
  * If you have trouble to make the objects available from behind your router/firewall
  * make sure that you have correctly set the java.rmi.server.hostname system property with
- * an hostname matching your router/firewall IP.<br/>
+ * an hostname matching your router/firewall IP.<br>
  * 
  * Make also sure that your RMI Registry port is opened on the router
  * otherwise nothing will work. You can use a urn:schemas-upnp-org:device:InternetGatewayDevice:1
@@ -193,7 +193,7 @@ public class UnicastRemoteObject extends RemoteServer {
     exportObject( this, port, csf, ssf );
   }
 
-  /**
+  /*
    * Re-export the remote object when it is deserialized.
    */
   private void readObject( java.io.ObjectInputStream in )

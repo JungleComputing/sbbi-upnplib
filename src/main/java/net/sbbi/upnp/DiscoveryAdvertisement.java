@@ -54,8 +54,9 @@ import java.util.*;
 import org.apache.commons.logging.*;
 
 /**
- * SSDP messages listener Thread, notify registered objects implementing the interface DiscoveryEventHandler</br>
- * when a device joins the networks or leaves it.<br/>
+ * SSDP messages listener Thread, notify registered objects implementing the interface DiscoveryEventHandler
+ * when a device joins the networks or leaves it.
+ *
  * The listener thread is set to only accept matching device description and broadcast message sender IP
  * to avoid a security flaw with the protocol. If you are not happy with such behaviour
  * you can set the net.sbbi.upnp.ddos.matchip system property to false to avoid this check.

@@ -141,7 +141,7 @@ public class ServiceStateVariable implements ServiceStateVariableTypes {
   }
   
   /**
-   * The varialbe JAVA data type (using an UPNP->Java mapping)
+   * The varialbe JAVA data type (using an UPNP-Java mapping)
    * @return the class mapped
    */
   public Class getDataTypeAsClass() {

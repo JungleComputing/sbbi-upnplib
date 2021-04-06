@@ -206,7 +206,7 @@ public class ISO8601Date {
    * Parse the given string in ISO 8601 format and build a Date object.
    * @param isodate the date in ISO 8601 format
    * @return a Date instance
-   * @exception InvalidDateException
+   * @exception NumberFormatException
    *              if the date is not valid
    */
   public static Date parse(String isodate) throws NumberFormatException {

@@ -78,9 +78,11 @@ import net.sbbi.upnp.jmx.UPNPMBeanDevice;
 import net.sbbi.upnp.jmx.UPNPServiceMBean;
 
 /**
- * JMX connector server, this connector can be used to expose all deployed MBeans on an MBeans Server as UPNP devices</br>
+ * JMX connector server, this connector can be used to expose all deployed MBeans on an MBeans Server as UPNP devices.
+ *
  * You can use an object implementing the {@link net.sbbi.upnp.jmx.upnp.UPNPMBeanBuilder} interface do define which beans can be deployed
- * as UPNP devices.</br>
+ * as UPNP devices.
+ *
  * Look at the UPNP_MBEANS_BUILDER, EXPOSE_UPNP_DEVICES_AS_MBEANS and EXPOSE_MBEANS_AS_UPNP_DEVICES vars
  * for more info about connector specific settings.
  * @author <a href="mailto:superbonbon@sbbi.net">SuperBonBon</a>

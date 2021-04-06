@@ -223,6 +223,7 @@ public class InternetGatewayDevice {
    * @param timeout the timeout in ms to listen for devices response, -1 for default value
    * @return an array of devices to play with or null if nothing found or if found devices
    *         do not have the urn:schemas-upnp-org:service:WANIPConnection:1 service
+   * @throws IOException
    * @deprecated use generic {@link #getDevices(int)} or {@link #getDevices(int, int, int, NetworkInterface)} methods since this one is not
    *             usable with all IGD devices ( will only work with devices implementing the urn:schemas-upnp-org:service:WANIPConnection:1 service )
    */
@@ -235,6 +236,7 @@ public class InternetGatewayDevice {
    * @param timeout the timeout in ms to listen for devices response, -1 for default value
    * @return an array of devices to play with or null if nothing found or if found devices
    *         do not have the urn:schemas-upnp-org:service:WANPPPConnection:1 service
+   * @throws IOException
    * @deprecated use generic {@link #getDevices(int)} or {@link #getDevices(int, int, int, NetworkInterface)} methods since this one is not
    *             usable with all IGD devices ( will only work with devices implementing the urn:schemas-upnp-org:service:WANPPPConnection:1 service )
    */
@@ -352,14 +354,14 @@ public class InternetGatewayDevice {
    * @param protocol the protocol, either TCP or UDP
    * @return true if the port is mapped false if the mapping is allready done for another internal client
    * @throws IOException if some error occurs during communication with the device
-   * @throws UPNPResponseException if the device does not accept some settings :<br/>
-   *                               402 Invalid Args See UPnP Device Architecture section on Control<br/>
-   *                               501 Action Failed See UPnP Device Architecture section on Control<br/>
-   *                               715 WildCardNotPermittedInSrcIP The source IP address cannot be wild-carded<br/>
-   *                               716 WildCardNotPermittedInExtPort The external port cannot be wild-carded <br/>
-   *                               724 SamePortValuesRequired Internal and External port values must be the same<br/>
-   *                               725 OnlyPermanentLeasesSupported The NAT implementation only supports permanent lease times on port mappings<br/>
-   *                               726 RemoteHostOnlySupportsWildcard RemoteHost must be a wildcard and cannot be a specific IP address or DNS name<br/>
+   * @throws UPNPResponseException if the device does not accept some settings :<br>
+   *                               402 Invalid Args See UPnP Device Architecture section on Control<br>
+   *                               501 Action Failed See UPnP Device Architecture section on Control<br>
+   *                               715 WildCardNotPermittedInSrcIP The source IP address cannot be wild-carded<br>
+   *                               716 WildCardNotPermittedInExtPort The external port cannot be wild-carded <br>
+   *                               724 SamePortValuesRequired Internal and External port values must be the same<br>
+   *                               725 OnlyPermanentLeasesSupported The NAT implementation only supports permanent lease times on port mappings<br>
+   *                               726 RemoteHostOnlySupportsWildcard RemoteHost must be a wildcard and cannot be a specific IP address or DNS name<br>
    *                               727 ExternalPortOnlySupportsWildcard ExternalPort must be a wildcard and cannot be a specific port value
    */
   public boolean addPortMapping( String description, String remoteHost,

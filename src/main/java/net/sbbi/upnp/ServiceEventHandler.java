@@ -60,7 +60,8 @@ public interface ServiceEventHandler {
   
   /**
    * Handle a var change, called each time a UPNP service fires a
-   * state variable eventing message.</br>
+   * state variable eventing message.
+   *
    * The code implemented in this method can block the thread.
    * @param varName the state variable name
    * @param newValue the new state variable value

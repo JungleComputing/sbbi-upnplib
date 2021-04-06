@@ -59,21 +59,32 @@ import net.sbbi.upnp.messages.*;
 /**
  * This is a dynamic MBean for UPNP services
  * The dynamic MBean will be populated with basic informations
- * about UPNP service attributes and operations.</br>
+ * about UPNP service attributes and operations.
+ *
  * You can provide a locale object
  * that will try to lookup a resource bundle to generate attributes
- * and operations informations.</br>
+ * and operations informations.
+ *
  * The bundle must contains the following data to match the UPNP devices
- * actions and state variables:</br>
- * service.name=My Service description</br>
- * attribute.ServiceAttribute=My Attribute Desc</br>
- * operation.ServiceOperation=My Action de description</br>
- * operation.ServiceOperation.ActionArgument1=My Action first argument description</br>
- * operation.ServiceOperation.ActionArgument2=My Action second argument description</br>
+ * actions and state variables:
+ *
+ * service.name=My Service description
+ *
+ * attribute.ServiceAttribute=My Attribute Desc
+ *
+ * operation.ServiceOperation=My Action de description
+ *
+ * operation.ServiceOperation.ActionArgument1=My Action first argument description
+ *
+ * operation.ServiceOperation.ActionArgument2=My Action second argument description
+ *
  * and must be named with the UPNP service Id + locale, the service id ':' char must be replaced
- * with '_' chars. </br>
- * urn:upnp-org:serviceId:LANHostCfg1 will be translated into : </br>
+ * with '_' chars. 
+ *
+ * urn:upnp-org:serviceId:LANHostCfg1 will be translated into : 
+ *
  * urn_upnp-org_serviceId_LANHostCfg1_fr.properties
+ *
  * @author <a href="mailto:superbonbon@sbbi.net">SuperBonBon</a>
  * @version 1.0
  */

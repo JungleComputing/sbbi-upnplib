@@ -55,7 +55,8 @@ import net.sbbi.upnp.devices.*;
 import org.apache.commons.logging.*;
 
 /**
- * Class to discover an UPNP device on the network.</br>
+ * Class to discover an UPNP device on the network.
+ *
  * A multicast socket will be created to discover devices, the binding port for this socket is set to 1901,
  * if this is causing a problem you can use the net.sbbi.upnp.Discovery.bindPort system property 
  * to specify another port.

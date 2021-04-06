@@ -249,7 +249,7 @@ public class UPNPDevice {
   
   /**
    * Looks for a UPNP device service definition object for the given service ID
-   * @param serviceURI the ID of the service
+   * @param serviceID the ID of the service
    * @return A matching UPNPService object or null
    */
   public UPNPService getServiceByID( String serviceID ) {
