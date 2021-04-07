@@ -112,6 +112,7 @@ on behalf of SuperBonBon Industries (SBBI). Now placed in junglecomputing becaus
         <id>release</id>
         <build>
             <plugins>
+                <!--
             <plugin>
               <groupId>org.sonatype.plugins</groupId>
               <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -123,6 +124,7 @@ on behalf of SuperBonBon Industries (SBBI). Now placed in junglecomputing becaus
                 <autoReleaseAfterClose>true</autoReleaseAfterClose>
               </configuration>
             </plugin>
+                -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
